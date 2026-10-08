@@ -5,94 +5,563 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Roy Duque — IT Support Analyst portfolio, resume, technical skills, experience, and professional recognition.">
   <title>Roy Duque | IT Support Analyst</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
   <style>
     :root{
-      --bg:#07111f; --panel:#0d1b2d; --panel2:#101f33; --text:#eef5ff;
-      --muted:#9fb0c5; --line:#20334a; --accent:#55b7ff; --accent2:#7c6cff;
-      --max:1120px; --radius:18px;
+      --bg:#07111f;
+      --panel:#0d1b2d;
+      --panel2:#101f33;
+      --text:#eef5ff;
+      --muted:#9fb0c5;
+      --line:#20334a;
+      --accent:#55b7ff;
+      --accent2:#7c6cff;
+      --max:1120px;
+      --radius:18px;
     }
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;background:radial-gradient(circle at 80% 0%,#152b49 0,#07111f 38%);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6}
-    a{color:inherit;text-decoration:none}
-    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
-    nav{position:sticky;top:0;z-index:10;background:rgba(7,17,31,.82);backdrop-filter:blur(14px);border-bottom:1px solid rgba(159,176,197,.12)}
-    .nav-inner{height:70px;display:flex;align-items:center;justify-content:space-between}
-    .brand{font-weight:800;letter-spacing:-.03em}
-    .brand span{color:var(--accent)}
-    .links{display:flex;gap:24px;color:var(--muted);font-size:14px}
-    .links a:hover{color:var(--text)}
-    .hero{padding:100px 0 80px;display:grid;grid-template-columns:1.4fr .6fr;gap:60px;align-items:center}
-    .eyebrow{font:600 12px "JetBrains Mono",monospace;color:var(--accent);letter-spacing:.12em;text-transform:uppercase}
-    h1{font-size:clamp(44px,7vw,76px);line-height:.98;letter-spacing:-.055em;margin:14px 0 22px}
-    .hero h1 span{display:block;color:#b8c8dc}
-    .lead{font-size:19px;color:var(--muted);max-width:700px}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 17px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:14px}
-    .btn.primary{background:var(--accent);color:#03101d;border-color:var(--accent)}
-    .btn:hover{transform:translateY(-1px)}
-    .terminal{background:linear-gradient(145deg,#0d1b2d,#091523);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 25px 70px rgba(0,0,0,.25)}
-    .dots{display:flex;gap:7px;margin-bottom:18px}.dots i{width:9px;height:9px;border-radius:50%;background:#38506c}
-    pre{margin:0;white-space:pre-wrap;font:500 13px/1.8 "JetBrains Mono",monospace;color:#c5d6e9}
-    .blue{color:var(--accent)} .purple{color:#a69cff} .green{color:#8fe1b5}
-    section{padding:78px 0;border-top:1px solid rgba(159,176,197,.10)}
-    .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
-    h2{font-size:34px;letter-spacing:-.04em;margin:0}
-    .section-head p{margin:0;color:var(--muted);max-width:580px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .card{background:rgba(13,27,45,.75);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
-    .card h3{margin:0 0 9px;font-size:18px}.card p{margin:0;color:var(--muted);font-size:14px}
-    .skill-list{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
-    .pill{padding:7px 10px;border-radius:999px;background:#12263e;border:1px solid #25405e;color:#c9d9ea;font-size:12px;font-weight:600}
-    .timeline{display:grid;gap:16px}
-    .job{display:grid;grid-template-columns:220px 1fr;gap:28px;padding:24px;border:1px solid var(--line);border-radius:var(--radius);background:rgba(13,27,45,.65)}
-    .date{font:600 12px "JetBrains Mono",monospace;color:var(--accent)}
-    .job h3{margin:5px 0 2px;font-size:19px}.company{color:#c4d2e3;font-weight:600}.job ul{margin:14px 0 0;padding-left:20px;color:var(--muted);font-size:14px}
-    .recognition{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-    .review-card{margin:0;background:rgba(13,27,45,.75);border:1px solid var(--line);border-radius:var(--radius);padding:12px;overflow:hidden}
-    .review-card img{display:block;width:100%;height:auto;border-radius:12px;cursor:zoom-in}
-    .review-card figcaption{padding:13px 7px 5px;color:var(--muted);font-size:13px}
-    .review-placeholder{min-height:210px;display:flex;align-items:center;justify-content:center;text-align:center;border:1px dashed #36506d;border-radius:var(--radius);background:linear-gradient(145deg,#0d1b2d,#0b1726);color:var(--muted);padding:25px}
-    .review-placeholder strong{display:block;color:var(--text);margin-bottom:6px}
-    .resume-box{display:flex;justify-content:space-between;align-items:center;gap:25px;padding:30px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(135deg,#0e2035,#0c1727)}
-    .resume-box h3{margin:0 0 6px;font-size:23px}.resume-box p{margin:0;color:var(--muted)}
-    footer{padding:35px 0;color:var(--muted);font-size:13px}
-    .contact{display:flex;flex-wrap:wrap;gap:12px}
+
+    *{
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      margin:0;
+      background:radial-gradient(circle at 80% 0%,#152b49 0,#07111f 38%);
+      color:var(--text);
+      font-family:Inter,system-ui,sans-serif;
+      line-height:1.6;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(var(--max),calc(100% - 40px));
+      margin:auto;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(7,17,31,.82);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(159,176,197,.12);
+    }
+
+    .nav-inner{
+      height:70px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .brand{
+      font-weight:800;
+      letter-spacing:-.03em;
+    }
+
+    .brand span{
+      color:var(--accent);
+    }
+
+    .links{
+      display:flex;
+      gap:24px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .links a:hover{
+      color:var(--text);
+    }
+
+    .hero{
+      padding:100px 0 80px;
+      display:grid;
+      grid-template-columns:1.4fr .6fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      font:600 12px "JetBrains Mono",monospace;
+      color:var(--accent);
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      font-size:clamp(44px,7vw,76px);
+      line-height:.98;
+      letter-spacing:-.055em;
+      margin:14px 0 22px;
+    }
+
+    .hero h1 span{
+      display:block;
+      color:#b8c8dc;
+    }
+
+    .lead{
+      font-size:19px;
+      color:var(--muted);
+      max-width:700px;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:30px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 17px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    .btn.primary{
+      background:var(--accent);
+      color:#03101d;
+      border-color:var(--accent);
+    }
+
+    .btn:hover{
+      transform:translateY(-1px);
+    }
+
+    .terminal{
+      background:linear-gradient(145deg,#0d1b2d,#091523);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow:0 25px 70px rgba(0,0,0,.25);
+    }
+
+    .dots{
+      display:flex;
+      gap:7px;
+      margin-bottom:18px;
+    }
+
+    .dots i{
+      width:9px;
+      height:9px;
+      border-radius:50%;
+      background:#38506c;
+    }
+
+    pre{
+      margin:0;
+      white-space:pre-wrap;
+      font:500 13px/1.8 "JetBrains Mono",monospace;
+      color:#c5d6e9;
+    }
+
+    .blue{
+      color:var(--accent);
+    }
+
+    .purple{
+      color:#a69cff;
+    }
+
+    .green{
+      color:#8fe1b5;
+    }
+
+    section{
+      padding:78px 0;
+      border-top:1px solid rgba(159,176,197,.10);
+    }
+
+    .section-head{
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      align-items:end;
+      margin-bottom:28px;
+    }
+
+    h2{
+      font-size:34px;
+      letter-spacing:-.04em;
+      margin:0;
+    }
+
+    .section-head p{
+      margin:0;
+      color:var(--muted);
+      max-width:580px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .card{
+      background:rgba(13,27,45,.75);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:24px;
+    }
+
+    .card h3{
+      margin:0 0 9px;
+      font-size:18px;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .skill-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:9px;
+      margin-top:16px;
+    }
+
+    .pill{
+      padding:7px 10px;
+      border-radius:999px;
+      background:#12263e;
+      border:1px solid #25405e;
+      color:#c9d9ea;
+      font-size:12px;
+      font-weight:600;
+    }
+
+    .timeline{
+      display:grid;
+      gap:16px;
+    }
+
+    .job{
+      display:grid;
+      grid-template-columns:220px 1fr;
+      gap:28px;
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:rgba(13,27,45,.65);
+    }
+
+    .date{
+      font:600 12px "JetBrains Mono",monospace;
+      color:var(--accent);
+    }
+
+    .job h3{
+      margin:5px 0 2px;
+      font-size:19px;
+    }
+
+    .company{
+      color:#c4d2e3;
+      font-weight:600;
+    }
+
+    .job ul{
+      margin:14px 0 0;
+      padding-left:20px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .recognition{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+    }
+
+    .review-card{
+      margin:0;
+      background:rgba(13,27,45,.75);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      padding:12px;
+      overflow:hidden;
+    }
+
+    /* CLICKABLE IMAGE */
+    .review-card img{
+      display:block;
+      width:100%;
+      height:auto;
+      border-radius:12px;
+      cursor:zoom-in;
+      transition:transform .2s ease, opacity .2s ease;
+    }
+
+    .review-card img:hover{
+      transform:scale(1.01);
+      opacity:.92;
+    }
+
+    .review-card figcaption{
+      padding:13px 7px 5px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .review-placeholder{
+      min-height:210px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      border:1px dashed #36506d;
+      border-radius:var(--radius);
+      background:linear-gradient(145deg,#0d1b2d,#0b1726);
+      color:var(--muted);
+      padding:25px;
+    }
+
+    .review-placeholder strong{
+      display:block;
+      color:var(--text);
+      margin-bottom:6px;
+    }
+
+    .resume-box{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:25px;
+      padding:30px;
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      background:linear-gradient(135deg,#0e2035,#0c1727);
+    }
+
+    .resume-box h3{
+      margin:0 0 6px;
+      font-size:23px;
+    }
+
+    .resume-box p{
+      margin:0;
+      color:var(--muted);
+    }
+
+    footer{
+      padding:35px 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .contact{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    /* IMAGE ZOOM MODAL */
+
+    .image-modal{
+      display:none;
+      position:fixed;
+      z-index:9999;
+      inset:0;
+      background:rgba(0,0,0,.92);
+      align-items:center;
+      justify-content:center;
+      padding:30px;
+      cursor:zoom-out;
+    }
+
+    .image-modal.active{
+      display:flex;
+    }
+
+    .image-modal img{
+      max-width:95%;
+      max-height:90vh;
+      width:auto;
+      height:auto;
+      object-fit:contain;
+      border-radius:10px;
+      box-shadow:0 20px 80px rgba(0,0,0,.6);
+    }
+
+    .image-modal-close{
+      position:absolute;
+      top:20px;
+      right:30px;
+      background:none;
+      border:0;
+      color:white;
+      font-size:45px;
+      line-height:1;
+      cursor:pointer;
+      z-index:10000;
+    }
+
+    .image-modal-close:hover{
+      color:var(--accent);
+    }
+
     @media(max-width:850px){
-      .links{display:none}.hero{grid-template-columns:1fr;padding-top:70px}.grid{grid-template-columns:1fr 1fr}.job{grid-template-columns:1fr;gap:5px}.recognition{grid-template-columns:1fr}
+
+      .links{
+        display:none;
+      }
+
+      .hero{
+        grid-template-columns:1fr;
+        padding-top:70px;
+      }
+
+      .grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .job{
+        grid-template-columns:1fr;
+        gap:5px;
+      }
+
+      .recognition{
+        grid-template-columns:1fr;
+      }
+
     }
+
     @media(max-width:560px){
-      .container{width:min(var(--max),calc(100% - 28px))}.grid{grid-template-columns:1fr}.hero{padding-bottom:55px}h2{font-size:28px}.resume-box{display:block}.resume-box .btn{margin-top:18px;width:100%}
+
+      .container{
+        width:min(var(--max),calc(100% - 28px));
+      }
+
+      .grid{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-bottom:55px;
+      }
+
+      h2{
+        font-size:28px;
+      }
+
+      .resume-box{
+        display:block;
+      }
+
+      .resume-box .btn{
+        margin-top:18px;
+        width:100%;
+      }
+
+      .image-modal{
+        padding:15px;
+      }
+
+      .image-modal img{
+        max-width:100%;
+        max-height:85vh;
+      }
+
+      .image-modal-close{
+        top:10px;
+        right:15px;
+        font-size:40px;
+      }
+
     }
   </style>
 </head>
+
 <body>
+
 <nav>
   <div class="container nav-inner">
     <a class="brand" href="#top">ROY<span>.</span>DUQUE</a>
+
     <div class="links">
-      <a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#recognition">Recognition</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
     </div>
   </div>
 </nav>
 
 <main id="top">
+
   <div class="container hero">
+
     <div>
-      <div class="eyebrow">IT Support Analyst • Houston, TX</div>
-      <h1>Technology support<br><span>that keeps work moving.</span></h1>
-      <p class="lead">IT Support Analyst with experience in Active Directory, network device configuration, endpoint support, NOC monitoring, Microsoft 365, and troubleshooting in fast-paced environments.</p>
-      <div class="actions">
-        <a class="btn primary" href="assets/Roy_Duque_Resume.pdf" download>Download Resume</a>
-        <a class="btn" href="#recognition">View Recognition</a>
-        <a class="btn" href="https://www.linkedin.com/in/roy-duque" target="_blank" rel="noopener">LinkedIn ↗</a>
+
+      <div class="eyebrow">
+        IT Support Analyst • Houston, TX
       </div>
+
+      <h1>
+        Technology support
+        <br>
+        <span>that keeps work moving.</span>
+      </h1>
+
+      <p class="lead">
+        IT Support Analyst with experience in Active Directory, network device configuration, endpoint support, NOC monitoring, Microsoft 365, and troubleshooting in fast-paced environments.
+      </p>
+
+      <div class="actions">
+
+        <a class="btn primary"
+           href="assets/Roy_Duque_Resume.pdf"
+           download>
+          Download Resume
+        </a>
+
+        <a class="btn" href="#recognition">
+          View Recognition
+        </a>
+
+        <a class="btn"
+           href="https://www.linkedin.com/in/roy-duque"
+           target="_blank"
+           rel="noopener">
+          LinkedIn ↗
+        </a>
+
+      </div>
+
     </div>
+
     <div class="terminal">
-      <div class="dots"><i></i><i></i><i></i></div>
+
+      <div class="dots">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+
       <pre><span class="purple">roy@portfolio</span>:<span class="blue">~</span>$ whoami
 
 <span class="green">IT Support Analyst</span>
@@ -105,118 +574,624 @@
   Security
 
 <span class="blue">status</span>: open to opportunities</pre>
+
     </div>
+
   </div>
 
+
+  <!-- EXPERIENCE -->
+
   <section id="experience">
+
     <div class="container">
+
       <div class="section-head">
+
         <h2>Experience</h2>
-        <p>A progression from help desk support into broader systems, networking, and infrastructure responsibilities.</p>
+
+        <p>
+          A progression from help desk support into broader systems, networking, and infrastructure responsibilities.
+        </p>
+
       </div>
+
+
       <div class="timeline">
+
         <article class="job">
-          <div><div class="date">JUN 2025 — PRESENT</div><h3>IT Support Analyst</h3><div class="company">GB Tech • Houston, TX</div></div>
+
+          <div>
+
+            <div class="date">
+              JUN 2025 — PRESENT
+            </div>
+
+            <h3>
+              IT Support Analyst
+            </h3>
+
+            <div class="company">
+              GB Tech • Houston, TX
+            </div>
+
+          </div>
+
           <ul>
-            <li>Configure and manage network devices including SonicWall firewalls and Cisco switches.</li>
-            <li>Administer Active Directory, including user creation, permissions, and group policies.</li>
-            <li>Monitor and respond to NOC alerts to maintain system uptime.</li>
-            <li>Troubleshoot escalated networking, server, and endpoint issues.</li>
-            <li>Coordinate with ISPs for internet setup and troubleshooting.</li>
+
+            <li>
+              Configure and manage network devices including SonicWall firewalls and Cisco switches.
+            </li>
+
+            <li>
+              Administer Active Directory, including user creation, permissions, and group policies.
+            </li>
+
+            <li>
+              Monitor and respond to NOC alerts to maintain system uptime.
+            </li>
+
+            <li>
+              Troubleshoot escalated networking, server, and endpoint issues.
+            </li>
+
+            <li>
+              Coordinate with ISPs for internet setup and troubleshooting.
+            </li>
+
           </ul>
+
         </article>
+
+
         <article class="job">
-          <div><div class="date">AUG 2024 — JUN 2025</div><h3>Help Desk Technician</h3><div class="company">GB Tech • Houston, TX</div></div>
+
+          <div>
+
+            <div class="date">
+              AUG 2024 — JUN 2025
+            </div>
+
+            <h3>
+              Help Desk Technician
+            </h3>
+
+            <div class="company">
+              GB Tech • Houston, TX
+            </div>
+
+          </div>
+
           <ul>
-            <li>Resolved 25–40+ support tickets daily through phone, email, and remote tools.</li>
-            <li>Provided Tier 1 support for hardware, software, and connectivity issues.</li>
-            <li>Managed user accounts and password resets in Active Directory.</li>
-            <li>Installed and configured desktops, printers, and standard software.</li>
-            <li>Used ServiceNow to track and resolve incidents within SLA.</li>
+
+            <li>
+              Resolved 25–40+ support tickets daily through phone, email, and remote tools.
+            </li>
+
+            <li>
+              Provided Tier 1 support for hardware, software, and connectivity issues.
+            </li>
+
+            <li>
+              Managed user accounts and password resets in Active Directory.
+            </li>
+
+            <li>
+              Installed and configured desktops, printers, and standard software.
+            </li>
+
+            <li>
+              Used ServiceNow to track and resolve incidents within SLA.
+            </li>
+
           </ul>
+
         </article>
+
+
         <article class="job">
-          <div><div class="date">FEB 2024 — JUL 2024</div><h3>IT Support Specialist</h3><div class="company">Houston Shutters • Houston, TX</div></div>
+
+          <div>
+
+            <div class="date">
+              FEB 2024 — JUL 2024
+            </div>
+
+            <h3>
+              IT Support Specialist
+            </h3>
+
+            <div class="company">
+              Houston Shutters • Houston, TX
+            </div>
+
+          </div>
+
           <ul>
-            <li>Supported internal users with hardware and software troubleshooting.</li>
-            <li>Maintained systems, networks, and peripherals.</li>
-            <li>Assisted with CNC machines and embedded IT systems.</li>
-            <li>Performed system updates, backups, and monitoring.</li>
-            <li>Trained employees on IT best practices.</li>
+
+            <li>
+              Supported internal users with hardware and software troubleshooting.
+            </li>
+
+            <li>
+              Maintained systems, networks, and peripherals.
+            </li>
+
+            <li>
+              Assisted with CNC machines and embedded IT systems.
+            </li>
+
+            <li>
+              Performed system updates, backups, and monitoring.
+            </li>
+
+            <li>
+              Trained employees on IT best practices.
+            </li>
+
           </ul>
+
         </article>
+
+
         <article class="job">
-          <div><div class="date">SEP 2022 — FEB 2024</div><h3>Help Desk Support Specialist</h3><div class="company">CBIZ • Remote</div></div>
+
+          <div>
+
+            <div class="date">
+              SEP 2022 — FEB 2024
+            </div>
+
+            <h3>
+              Help Desk Support Specialist
+            </h3>
+
+            <div class="company">
+              CBIZ • Remote
+            </div>
+
+          </div>
+
           <ul>
-            <li>Delivered customer support in a fast-paced help desk environment.</li>
-            <li>Troubleshot VoIP, connectivity, and user-access issues.</li>
-            <li>Managed tickets using ServiceNow and ensured SLA compliance.</li>
-            <li>Provided remote support for Windows and Microsoft 365 users.</li>
+
+            <li>
+              Delivered customer support in a fast-paced help desk environment.
+            </li>
+
+            <li>
+              Troubleshot VoIP, connectivity, and user-access issues.
+            </li>
+
+            <li>
+              Managed tickets using ServiceNow and ensured SLA compliance.
+            </li>
+
+            <li>
+              Provided remote support for Windows and Microsoft 365 users.
+            </li>
+
           </ul>
+
         </article>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- SKILLS -->
 
   <section id="skills">
+
     <div class="container">
+
       <div class="section-head">
-        <h2>Technical Skills</h2>
-        <p>Technologies and areas represented on the current resume.</p>
+
+        <h2>
+          Technical Skills
+        </h2>
+
+        <p>
+          Technologies and areas represented on the current resume.
+        </p>
+
       </div>
+
+
       <div class="grid">
-        <div class="card"><h3>Operating Systems</h3><p>Windows 10/11, Windows Server 2012–2019, macOS</p></div>
-        <div class="card"><h3>Networking</h3><p>TCP/IP, DNS, DHCP, OSI Model</p><div class="skill-list"><span class="pill">Cisco</span><span class="pill">SonicWall</span><span class="pill">Wireshark</span></div></div>
-        <div class="card"><h3>Cloud & Admin</h3><p>Microsoft 365 Admin Center, Entra ID, Google Admin</p></div>
-        <div class="card"><h3>Service & Remote Tools</h3><p>ServiceNow, ConnectWise, ITGlue, LogMeIn</p></div>
-        <div class="card"><h3>Security</h3><p>SentinelOne, Huntress, Proofpoint</p></div>
-        <div class="card"><h3>Scripting</h3><p>PowerShell (basic)</p></div>
+
+        <div class="card">
+
+          <h3>
+            Operating Systems
+          </h3>
+
+          <p>
+            Windows 10/11, Windows Server 2012–2019, macOS
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Networking
+          </h3>
+
+          <p>
+            TCP/IP, DNS, DHCP, OSI Model
+          </p>
+
+          <div class="skill-list">
+
+            <span class="pill">
+              Cisco
+            </span>
+
+            <span class="pill">
+              SonicWall
+            </span>
+
+            <span class="pill">
+              Wireshark
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Cloud & Admin
+          </h3>
+
+          <p>
+            Microsoft 365 Admin Center, Entra ID, Google Admin
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Service & Remote Tools
+          </h3>
+
+          <p>
+            ServiceNow, ConnectWise, ITGlue, LogMeIn
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Security
+          </h3>
+
+          <p>
+            SentinelOne, Huntress, Proofpoint
+          </p>
+
+        </div>
+
+
+        <div class="card">
+
+          <h3>
+            Scripting
+          </h3>
+
+          <p>
+            PowerShell (basic)
+          </p>
+
+        </div>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- PROFESSIONAL RECOGNITION -->
 
   <section id="recognition">
+
     <div class="container">
+
       <div class="section-head">
-        <h2>Professional Recognition</h2>
-        <p>Real feedback from colleagues, customers, and managers can provide useful context beyond a resume.</p>
+
+        <h2>
+          Professional Recognition
+        </h2>
+
+        <p>
+          Real feedback from colleagues, customers, and managers can provide useful context beyond a resume.
+        </p>
+
       </div>
+
+
       <div class="recognition">
+
+
+        <!-- CLICKABLE REVIEW IMAGE -->
+
         <figure class="review-card">
-          <img src="assets/good-review-1.png" alt="Google review showing positive feedback about Roy's IT support" loading="lazy">
-          <figcaption>Client feedback highlighting technical support and prompt issue resolution.</figcaption>
+
+          <img
+            src="assets/good-review-1.png"
+            alt="Google review showing positive feedback about Roy's IT support"
+            loading="lazy"
+          >
+
+          <figcaption>
+            Client feedback highlighting technical support and prompt issue resolution.
+            <strong style="color:#55b7ff;">
+              Click the image to enlarge.
+            </strong>
+          </figcaption>
+
         </figure>
-        <div class="review-placeholder"><div><strong>Review screenshot #2</strong>Add another piece of professional recognition here.</div></div>
-        <div class="review-placeholder"><div><strong>Review screenshot #3</strong>More feedback can be added as your portfolio grows.</div></div>
-        <div class="review-placeholder"><div><strong>Review screenshot #4</strong>Use this space for another strong example of your work.</div></div>
+
+
+        <div class="review-placeholder">
+
+          <div>
+
+            <strong>
+              Review screenshot #2
+            </strong>
+
+            Add another piece of professional recognition here.
+
+          </div>
+
+        </div>
+
+
+        <div class="review-placeholder">
+
+          <div>
+
+            <strong>
+              Review screenshot #3
+            </strong>
+
+            More feedback can be added as your portfolio grows.
+
+          </div>
+
+        </div>
+
+
+        <div class="review-placeholder">
+
+          <div>
+
+            <strong>
+              Review screenshot #4
+            </strong>
+
+            Use this space for another strong example of your work.
+
+          </div>
+
+        </div>
+
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- RESUME -->
 
   <section id="resume">
+
     <div class="container">
+
       <div class="resume-box">
-        <div><h3>Download my resume</h3><p>Current resume covering experience, technical skills, education, and certifications.</p></div>
-        <a class="btn primary" href="assets/Roy_Duque_Resume.pdf" download>Download PDF</a>
+
+        <div>
+
+          <h3>
+            Download my resume
+          </h3>
+
+          <p>
+            Current resume covering experience, technical skills, education, and certifications.
+          </p>
+
+        </div>
+
+        <a
+          class="btn primary"
+          href="assets/Roy_Duque_Resume.pdf"
+          download
+        >
+          Download PDF
+        </a>
+
       </div>
+
     </div>
+
   </section>
+
+
+  <!-- CONTACT -->
 
   <section id="contact">
+
     <div class="container">
+
       <div class="section-head">
-        <h2>Contact</h2>
-        <p>For opportunities, professional networking, or questions about my IT experience.</p>
+
+        <h2>
+          Contact
+        </h2>
+
+        <p>
+          For opportunities, professional networking, or questions about my IT experience.
+        </p>
+
       </div>
+
+
       <div class="contact">
-        <a class="btn" href="mailto:duque713645@gmail.com">duque713645@gmail.com</a>
-        <a class="btn" href="tel:+17134801282">713-480-1282</a>
-        <a class="btn" href="https://www.linkedin.com/in/roy-duque" target="_blank" rel="noopener">LinkedIn ↗</a>
+
+        <a
+          class="btn"
+          href="mailto:duque713645@gmail.com"
+        >
+          duque713645@gmail.com
+        </a>
+
+        <a
+          class="btn"
+          href="tel:+17134801282"
+        >
+          713-480-1282
+        </a>
+
+        <a
+          class="btn"
+          href="https://www.linkedin.com/in/roy-duque"
+          target="_blank"
+          rel="noopener"
+        >
+          LinkedIn ↗
+        </a>
+
       </div>
+
     </div>
+
   </section>
+
 </main>
 
-<footer><div class="container">© 2026 Roy Duque • IT Portfolio</div></footer>
+
+<footer>
+
+  <div class="container">
+    © 2026 Roy Duque • IT Portfolio
+  </div>
+
+</footer>
+
+
+<!-- IMAGE ZOOM WINDOW -->
+
+<div
+  id="imageModal"
+  class="image-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Enlarged professional recognition image"
+>
+
+  <button
+    class="image-modal-close"
+    aria-label="Close enlarged image"
+  >
+    &times;
+  </button>
+
+  <img
+    id="zoomedImage"
+    src=""
+    alt=""
+  >
+
+</div>
+
+
+<!-- IMAGE ZOOM JAVASCRIPT -->
+
+<script>
+
+  const images = document.querySelectorAll('.review-card img');
+
+  const modal = document.getElementById('imageModal');
+
+  const zoomedImage = document.getElementById('zoomedImage');
+
+  const closeButton = document.querySelector('.image-modal-close');
+
+
+  // Open the image
+
+  images.forEach(image => {
+
+    image.addEventListener('click', () => {
+
+      zoomedImage.src = image.src;
+
+      zoomedImage.alt = image.alt;
+
+      modal.classList.add('active');
+
+      document.body.style.overflow = 'hidden';
+
+    });
+
+  });
+
+
+  // Close with X button
+
+  closeButton.addEventListener('click', () => {
+
+    modal.classList.remove('active');
+
+    document.body.style.overflow = '';
+
+  });
+
+
+  // Close when clicking outside the image
+
+  modal.addEventListener('click', (event) => {
+
+    if (event.target === modal) {
+
+      modal.classList.remove('active');
+
+      document.body.style.overflow = '';
+
+    }
+
+  });
+
+
+  // Close with Escape key
+
+  document.addEventListener('keydown', (event) => {
+
+    if (event.key === 'Escape') {
+
+      modal.classList.remove('active');
+
+      document.body.style.overflow = '';
+
+    }
+
+  });
+
+</script>
+
 </body>
 </html>
